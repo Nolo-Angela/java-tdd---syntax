@@ -86,8 +86,19 @@ public class ConsolidationOne {
      */
     static int recursiveFibonacciN(int n) {
 
-        //FIX IT
-        return 0;
+        int[] fibonacciArray = new int[n];
+        int firstNum = 0, secondNum = 1;
+
+        for(int i=0; i<n; i++){
+
+            fibonacciArray[i]= firstNum;
+
+            int nextNum = firstNum+secondNum;
+            firstNum = secondNum;
+            secondNum = nextNum;
+        }
+
+        return fibonacciArray[n-1];
     }
 
     /**
