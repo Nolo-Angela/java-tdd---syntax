@@ -108,8 +108,16 @@ public class ConsolidationOne {
      * @return a string * representation of the triangle.
      */
     static String drawTriangle(int n) {
+        StringBuilder triangle = new StringBuilder();
 
-        return "";
+        for(int i=1; i<=n; i++){
+            for(int x=0; x<i; x++){
+                triangle.append("*");
+            }
+            triangle.append("\n");
+        }
+
+        return triangle.toString();
     }
 
     /**
