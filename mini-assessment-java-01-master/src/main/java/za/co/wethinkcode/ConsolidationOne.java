@@ -60,8 +60,19 @@ public class ConsolidationOne {
      * @return a string representation of the Fibonacci sequence
      */
     static String getFibonacciSequence(int n) {
+        int[] fibonacciArray = new int[n];
+        int firstNum = 0, secondNum = 1;
 
-        return "Fibonacci Sequence: ";
+        for(int i=0; i<n; i++){
+
+            fibonacciArray[i]= firstNum;
+
+            int nextNum = firstNum+secondNum;
+            firstNum = secondNum;
+            secondNum = nextNum;
+        }
+
+        return "Fibonacci Sequence: "+ Arrays.toString(fibonacciArray);
     }
 
     /**
