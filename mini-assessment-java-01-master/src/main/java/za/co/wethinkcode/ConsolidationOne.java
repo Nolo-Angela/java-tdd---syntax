@@ -331,19 +331,18 @@ public class ConsolidationOne {
      * @return true if the string is a palindrome, false otherwise.
      */
     static boolean isPalindrome(String string) {
+
+        String reversedString = "";
+        int stringLength = string.length();
+
+        for(int i=stringLength; i>0; i--){
+            System.out.print(String.valueOf(i));
+            reversedString = reversedString + string.charAt(i);
+        }
+
+        if(string.equals(reversedString)) return true;
+
         return false;
-//        String rev = "";
-//        int len = string.length();
-//
-//        for(int x = len - 1; x >= 0; x--){
-//            rev = rev + string.charAt(x);
-//
-//        }
-//        if(string.equalsIgnoreCase(rev)){
-//            return true;
-//        }else{
-//            return false;
-//        }
 
     }
 
