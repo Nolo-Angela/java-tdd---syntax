@@ -13,7 +13,17 @@ public class ConsolidationOne {
      * @return the "FizzBuzz" string corresponding to the input number.
      */
     static String fizzBuzzOnce(int input) {
-     return null;
+
+        if(input%3==0 && input%5==0){
+            return "FizzBuzz";
+        }else if(input%5==0){
+            return "Buzz";
+        }else if(input%3==0){
+            return "Fizz";
+        }else{
+            return String.valueOf(input);
+        }
+
 
     }
 
