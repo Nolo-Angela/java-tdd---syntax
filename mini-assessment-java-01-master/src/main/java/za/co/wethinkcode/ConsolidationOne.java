@@ -34,8 +34,21 @@ public class ConsolidationOne {
      * @return a list of strings representing the "FizzBuzz" sequence
      */
     static List<String> fizzBuzz(int n) {
+        List<String> fizzBuzzArray = new ArrayList<>();
 
-        return Collections.singletonList("");
+        for(int i=1; i<=n; i++){
+
+        if(i%5==0 && i%3==0){
+            fizzBuzzArray.add("FizzBuzz");
+        }else if(i%5==0){
+            fizzBuzzArray.add("Buzz");
+        } else if (i%3==0) {
+            fizzBuzzArray.add("Fizz");
+        }else{
+            fizzBuzzArray.add(String.valueOf(i));
+        }}
+
+        return fizzBuzzArray;
     }
 
     /**
