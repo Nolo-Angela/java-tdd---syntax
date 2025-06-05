@@ -132,7 +132,22 @@ public class ConsolidationOne {
      * @return the result of the arithmetic operation as number.
      */
     static String calculate(int a, int b, String operator) {
-return null;
+
+        switch(operator){
+            case "+":
+                return "Okay: " + (a+b);
+            case "-":
+                return "Okay: " + (a-b);
+            case "*":
+                return "Okay: " + (a*b);
+            case "/":
+                if(b<=0) return "Error: Division by zero is not allowed.";
+                return "Okay: " + (a/b);
+            case "%":
+                return calculateModCorrectly(a,b,operator);
+            default:
+                return "Error: Invalid operator: "+ operator;
+        }
     }
 
     /**
@@ -147,12 +162,9 @@ return null;
      * @return the result of the arithmetic operation as number.
      */
     static String calculateModCorrectly(int a, int b, String operator) {
+
+
         return null;
-//        if (operator == "%") {
-//            return "Okay: "+ (a%b);
-//        } else {
-//            return "Error: Invalid operator: "+operator;
-//        }
 
     }
 
