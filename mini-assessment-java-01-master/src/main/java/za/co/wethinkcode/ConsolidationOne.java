@@ -163,8 +163,12 @@ public class ConsolidationOne {
      */
     static String calculateModCorrectly(int a, int b, String operator) {
 
-
-        return null;
+        switch (operator){
+            case "%":
+                return "Okay: "+ (a%b);
+            default:
+                return "Error: Invalid operator: "+ operator;
+        }
 
     }
 
