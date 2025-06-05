@@ -179,7 +179,11 @@ public class ConsolidationOne {
      * @return a new list of names sorted in ascending order based on their length.
      */
     static List<String> correctOrder(List<String> names) {
-        return Collections.singletonList(" ");
+
+        List<String> sortedNames = new ArrayList<>(names);
+        sortedNames.sort(Comparator.comparingInt(String::length));
+
+        return sortedNames;
     }
 
     /**
