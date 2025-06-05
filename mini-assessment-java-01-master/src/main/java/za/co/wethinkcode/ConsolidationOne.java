@@ -216,13 +216,12 @@ public class ConsolidationOne {
      * @return - true if the DNA sequence represents a valid protein, false otherwise.
      */
     static boolean dnaProtein(String dna) {
-return false;
-//        int len = dna.length();
-//        if(len % 3 == 0 && dna.startsWith("ATG") && dna.endsWith("TGA")){
-//            return true;
-//        }else{
-//            return false;
-//        }
+
+        if(dna.startsWith("ATG") && dna.endsWith("TGA")){
+            return true;
+        }
+        return false;
+//
 
     }
 
