@@ -179,7 +179,10 @@ public class ConsolidationOne {
      * @return a new list of names sorted in ascending order based on their length.
      */
     static List<String> correctOrder(List<String> names) {
-
+        /*The Comparator class allows us to compare objects
+        using the .comparingInt method, it instructs the .sort() method
+        to sort the String elements by their lengths
+        * */
         List<String> sortedNames = new ArrayList<>(names);
         sortedNames.sort(Comparator.comparingInt(String::length));
 
